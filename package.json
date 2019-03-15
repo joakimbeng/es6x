@@ -1,6 +1,6 @@
 {
   "name": "@joakimbeng/es6x",
-  "version": "1.0.11",
+  "version": "2.0.0",
   "description": "Implementation of jsx features in pure javascript",
   "main": "src/es6x.js",
   "scripts": {
