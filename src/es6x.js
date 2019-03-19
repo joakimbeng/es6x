@@ -20,9 +20,9 @@ var parser = require('nano-parser'),
   whiteSpace = find(/^\s+/),
   optionalWhiteSpace = optional(whiteSpace),
   textNode = find(/^[^<]+/),
-  tagName = find(/^[a-zA-Z_][a-zA-Z0-9\-_]*/),
+  tagName = find(/^[$a-zA-Z_][$a-zA-Z0-9\-_]*/),
   placeholder = next(),
-  attrName = find(/^[a-zA-Z_][a-zA-Z0-9\-_]*/),
+  attrName = find(/^[$a-zA-Z_][$a-zA-Z0-9\-_]*/),
   booleanAttr = attrName.then(function(result) {
     return [result, true];
   }),

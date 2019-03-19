@@ -3,7 +3,7 @@
 **NOTE:** This is a fork of [vasiliy-lector/es6x](https://github.com/vasiliy-lector/es6x) with these differences:
 
 - `"..."` is needed to mimic object spread of attributes, i.e. `` jsx`<div ...${attrs}></div>` `` instead of `` jsx`<div ${attrs}></div>` ``
-- this package supports dashes and underscores in both tag names and attributes
+- this package supports dashes, underscores and \$ in both tag names and attributes
 
 Implementation of jsx features in pure javascript without the need to transpile.
 

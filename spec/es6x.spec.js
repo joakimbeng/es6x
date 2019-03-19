@@ -31,11 +31,31 @@ describe('es6x', () => {
     });
   });
 
+  it('should convert tags with dollar signs', () => {
+    expect(jsx`<$myElement className="block"></$myElement>`).toEqual({
+      tag: '$myElement',
+      attrs: {
+        className: 'block'
+      },
+      children: []
+    });
+  });
+
   it('should convert attributes with underscores', () => {
     expect(jsx`<div my_attribute="block"></div>`).toEqual({
       tag: 'div',
       attrs: {
         my_attribute: 'block'
+      },
+      children: []
+    });
+  });
+
+  it('should convert attributes with dollar signs', () => {
+    expect(jsx`<div $myAttribute="block"></div>`).toEqual({
+      tag: 'div',
+      attrs: {
+        $myAttribute: 'block'
       },
       children: []
     });
